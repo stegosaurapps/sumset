@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sumset</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <!-- START VIEW -->
+      <div id="start-view" class="view">
+        <h1 class="title puzzle-number">Puzzle #</h1>
+        <button id="start-btn" class="btn big">Start Puzzle</button>
+      </div>
+
+      <!-- GAME VIEW -->
+      <div id="game-view" class="view" hidden>
+        <div class="top-bar">
+          <div class="timer-wrap">
+            <div id="timer" class="meta-pill">00:00</div>
+            <div id="mistakes" class="mistakes"></div>
+          </div>
+          <h1 class="title puzzle-number">Puzzle #</h1>
+          <div class="help-wrap">
+            <div id="help-btn" class="icon-help" aria-label="How to play">?</div>
+            <div id="help-popover" class="help-popover" hidden>
+              <h3>How to play</h3>
+              <p>
+                Use digits <strong>1–9 exactly once</strong> to fill the grid.
+                Each row must equal the number on the right, and each column the number at the bottom.
+                Click a cell, then click the correct number. Each wrong guess adds an ❌. 3 wrong = fail.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- puzzle board -->
+        <div id="board" class="sumset-board">
+          <!-- row 0 -->
+          <div id="cell-0-0" class="cell"></div>
+          <div id="cell-0-1" class="cell"></div>
+          <div id="cell-0-2" class="cell"></div>
+          <div id="row-sum-0" class="row-sum"></div>
+
+          <!-- row 1 -->
+          <div id="cell-1-0" class="cell"></div>
+          <div id="cell-1-1" class="cell"></div>
+          <div id="cell-1-2" class="cell"></div>
+          <div id="row-sum-1" class="row-sum"></div>
+
+          <!-- row 2 -->
+          <div id="cell-2-0" class="cell"></div>
+          <div id="cell-2-1" class="cell"></div>
+          <div id="cell-2-2" class="cell"></div>
+          <div id="row-sum-2" class="row-sum"></div>
+
+          <!-- bottom col sums -->
+          <div id="col-sum-0" class="col-sum"></div>
+          <div id="col-sum-1" class="col-sum"></div>
+          <div id="col-sum-2" class="col-sum"></div>
+          <div class="bottom-corner"></div>
+        </div>
+
+        <!-- number pad -->
+        <div id="number-pad" class="number-pad"></div>
+
+        <div class="status-bar">
+          <span id="status-text"></span>
+        </div>
+      </div>
+
+      <!-- SUMMARY VIEW -->
+      <div id="summary-view" class="view" hidden>
+        <h1 class="title puzzle-number">Puzzle #</h1>
+        <p id="summary-stats" class="subtitle"></p>
+        <button id="share-btn" class="btn big">Copy Summary</button>
+      </div>
+    </div>
+
+    <script src="dist/app.js" type="module"></script>
+  </body>
+</html>
