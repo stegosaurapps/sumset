@@ -96,8 +96,6 @@ function renderPuzzleNumber() {
     const seed = dailyPuzzleNumber();
     const puzzleTitles = document.getElementsByClassName("puzzle-number");
     for (const puzzleTitle of puzzleTitles) {
-        console.log("APPENDING PUZZLE NUMBER: ");
-        console.log(seed);
         puzzleTitle.textContent = `Puzzle #${seed}`;
     }
 }
@@ -236,6 +234,7 @@ async function copySummaryToClipboard() {
         ta.select();
         document.execCommand("copy");
         document.body.removeChild(ta);
+        return true;
     }
 }
 // ---------------- INIT ----------------

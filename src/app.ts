@@ -110,9 +110,6 @@ function renderPuzzleNumber() {
   
   const puzzleTitles = document.getElementsByClassName("puzzle-number") as HTMLCollectionOf<Element>;
   for (const puzzleTitle of puzzleTitles) {
-    console.log("APPENDING PUZZLE NUMBER: ");
-    console.log(seed);
-
     puzzleTitle.textContent = `Puzzle #${seed}`;
   }
 }

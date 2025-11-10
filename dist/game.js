@@ -15,8 +15,6 @@ export function dailyGame() {
         solved: false,
         doneToday: function () {
             const stats = currentStats();
-            console.log("stats: ");
-            console.log(stats);
             // stats are only stored after the puzzle has been won or lost
             return this.seed == stats.seed;
         },

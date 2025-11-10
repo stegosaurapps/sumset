@@ -1,7 +1,8 @@
 :root {
-  --background-light: #FFEFD6;
-  --background-medium: #FFE8C2;
-  --background-dark: #FFE0AD;
+  --background-lightest: #F2F6F8;
+  --background-light: #F2F6F8;
+  --background-medium: #CADAE2;
+  --background-dark: #B0C8D4;
   --text-dark: #333333;
   --text-medium: #858585;
   --button: #6192A8;
@@ -19,18 +20,21 @@ body {
   font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
   display: flex;
   justify-content: center;
+  font-family: "Quicksand", sans-serif;
 }
 
 #app {
   width: min(100%, 480px);
   margin: 1.5rem 1rem 3rem;
   text-align: center;
+  font-family: "Quicksand", sans-serif;
 }
 
 .view {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: "Quicksand", sans-serif;
 }
 
 /* top bar */
@@ -40,23 +44,27 @@ body {
   justify-content: space-between;
   width: 100%;
   margin-bottom: 0.5rem;
+  font-family: "Quicksand", sans-serif;
 }
 
 .timer-wrap {
   display: flex;
   gap: 0.35rem;
   align-items: center;
+  font-family: "Quicksand", sans-serif;
 }
 
 #timer {
   background-color: var(--background-light);
   border: 1px solid rgba(29, 53, 87, 0.08);
+  font-family: "Quicksand", sans-serif;
 }
 
 .mistakes {
   display: flex;
   gap: 0.25rem;
   align-items: center;
+  font-family: "Quicksand", sans-serif;
 }
 
 .mistake-x {
@@ -64,6 +72,7 @@ body {
   font-weight: 700;
   font-size: 1.05rem;
   line-height: 1;
+  font-family: "Quicksand", sans-serif;
 }
 
 .title {
@@ -72,6 +81,7 @@ body {
   color: var(--text-dark);
   flex: 1;
   text-align: center;
+  font-family: "Arvo", serif;
 }
 
 .subtitle {
@@ -79,6 +89,7 @@ body {
   font-size: 0.9rem;
   margin-top: 0.25rem;
   margin-bottom: 1.25rem;
+  font-family: "Quicksand", sans-serif;
 }
 
 .meta-pill {
@@ -90,6 +101,7 @@ body {
   color: var(--text-dark);
   min-width: 70px;
   text-align: center;
+  font-family: "Quicksand", sans-serif;
 }
 
 /* board */
@@ -104,6 +116,7 @@ body {
   border: 2px solid var(--text-dark);
   background: var(--background-light);
   margin: 0 auto;
+  font-family: "Quicksand", sans-serif;
 }
 
 .cell {
@@ -116,17 +129,20 @@ body {
   cursor: pointer;
   user-select: none;
   transition: background 0.12s ease;
+  font-family: "Quicksand", sans-serif;
 }
 
 .cell.selected {
   outline: 3px solid var(--background-dark);
   outline-offset: -3px;
+  font-family: "Quicksand", sans-serif;
 }
 
 .cell.given {
   background: var(--background-dark);
   font-weight: 700;
   cursor: default;
+  font-family: "Quicksand", sans-serif;
 }
 
 .cell.flash-wrong {
@@ -146,6 +162,7 @@ body {
   align-items: center;
   justify-content: center;
   font-weight: 600;
+  font-family: "Quicksand", sans-serif;
 }
 
 .bottom-corner {
@@ -159,6 +176,7 @@ body {
   justify-content: center;
   gap: 0.5rem;
   flex-wrap: wrap;
+  font-family: "Quicksand", sans-serif;
 }
 
 .number-pad button {
@@ -172,15 +190,18 @@ body {
   font-size: 1rem;
   cursor: pointer;
   transition: transform 0.08s ease;
+  font-family: "Quicksand", sans-serif;
 }
 
 .number-pad button.disabled {
   opacity: 0.3;
   cursor: default;
+  font-family: "Quicksand", sans-serif;
 }
 
 .number-pad button:active {
   transform: scale(0.96);
+  font-family: "Quicksand", sans-serif;
 }
 
 /* status bar */
@@ -188,11 +209,13 @@ body {
   margin-top: 1.2rem;
   width: 100%;
   text-align: left;
+  font-family: "Quicksand", sans-serif;
 }
 
 #status-text {
   font-size: 0.85rem;
   color: var(--text-medium);
+  font-family: "Quicksand", sans-serif;
 }
 
 /* buttons */
@@ -204,16 +227,19 @@ body {
   padding: 0.45rem 0.9rem;
   font-weight: 600;
   cursor: pointer;
+  font-family: "Quicksand", sans-serif;
 }
 
 .btn.big {
   padding: 0.7rem 1.4rem;
   font-size: 1.1rem;
+  font-family: "Quicksand", sans-serif;
 }
 
 /* help popover */
 .help-wrap {
   position: relative;
+  font-family: "Quicksand", sans-serif;
 }
 
 .icon-help {
@@ -228,6 +254,7 @@ body {
   justify-content: center;
   border: 1px solid rgba(29, 53, 87, 0.08);
   cursor: pointer;
+  font-family: "Quicksand", sans-serif;
 }
 
 .help-popover {
@@ -242,12 +269,14 @@ body {
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
   text-align: left;
   z-index: 20;
+  font-family: "Quicksand", sans-serif;
 }
 
 .help-popover h3 {
   margin: 0 0 0.35rem;
   font-size: 0.9rem;
   color: var(--text-dark);
+  font-family: "Quicksand", sans-serif;
 }
 
 .help-popover p {
@@ -255,10 +284,12 @@ body {
   font-size: 0.75rem;
   line-height: 1.25;
   color: #425466;
+  font-family: "Quicksand", sans-serif;
 }
 
 .share-btn:active{
   background-color: var(--green);
+  font-family: "Quicksand", sans-serif;
 }
 
 #summary-stats {
@@ -266,4 +297,5 @@ body {
   margin-bottom: 1.5rem;
   color: var(--text-dark);
   font-size: 1rem;
+  font-family: "Quicksand", sans-serif;
 }
